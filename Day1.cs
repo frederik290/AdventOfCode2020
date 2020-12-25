@@ -6,7 +6,7 @@ public class ExpenseFixer
 {
     public void Run()
     {
-        var input = InputReader.GetInputForDay("Day1");
+        var input = InputReader.GetInputLinesForDay("Day1");
         var numbers = input.Select(l => int.Parse(l));
 
         foreach(var i in numbers)

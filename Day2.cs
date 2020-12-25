@@ -4,7 +4,7 @@ public class PasswordPhilosophy
 {
     public void Run()
     {
-        var input = InputReader.GetInputForDay("Day2");
+        var input = InputReader.GetInputLinesForDay("Day2");
         var validForFirstPolicy = 0;
         var validForSecondPolicy = 0;
 

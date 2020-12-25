@@ -4,7 +4,7 @@ public class TobogganTrajectory
 {
     public void Run()
     {
-        var input = InputReader.GetInputForDay("Day3");
+        var input = InputReader.GetInputLinesForDay("Day3");
         var numberOfTreesFor3right1Down = GetTreesForMap(input, 3, 1);
         var numberOfTreesFor1right1Down = GetTreesForMap(input, 1, 1);
         var numberOfTreesFor5right1Down = GetTreesForMap(input, 5, 1);
