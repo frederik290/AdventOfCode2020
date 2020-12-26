@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class BinaryBoarding
 {
@@ -6,18 +7,36 @@ public class BinaryBoarding
     {
         var input = InputReader.GetInputLinesForDay("Day5");
         var highestSeatId = 0;
+        var seatIds = new List<int>();
 
         foreach (var line in input)
         {
             var id = GetSeatIdFromString(line);
+            seatIds.Add(id);
 
             if(id > highestSeatId)
                 highestSeatId = id;
         }
 
         $"{highestSeatId} is the highest seat id".Dump();
-       
 
+        $"Seat with id {GetMissingSeatId(seatIds)} is missing".Dump();
+
+    }
+
+    private int GetMissingSeatId(List<int> seatIds)
+    {
+        seatIds.Sort();
+        var noMissingSeat = -1;
+        for(int i = 0; i < seatIds.Count; i++)
+        {
+            var current = seatIds[i];
+            var next = seatIds[i + 1];
+
+            if(next != current+1)
+                return current+1;
+        }
+        return noMissingSeat;
     }
 
     private int GetSeatIdFromString(string seatString)
@@ -35,7 +54,7 @@ public class BinaryBoarding
 
     private int DoBinarySearch(string seatString, int lower, int upper)
     {
-        $"seatString: {seatString}, lower:: {lower}, upper: {upper}".Dump();
+        //$"seatString: {seatString}, lower:: {lower}, upper: {upper}".Dump();
         var seatChar = seatString[0];
         var distance = 0;
 

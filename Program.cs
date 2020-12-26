@@ -19,6 +19,7 @@ namespace AdventOfCode
             // new TobogganTrajectory().Run();
             //new PassportProcessing().Run();
             //new BinaryBoarding().Run();
+            new CustomCustoms().Run();
         }
 
     }
