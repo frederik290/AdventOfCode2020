@@ -35,19 +35,10 @@ public class PassportProcessing
             var parts = GetPassportPartsFromString(passport);
 
             if (PassportHasRequiredParts(parts) && PassportHasValidData(parts, passport))
-            {
                 numberOfValidPassports++;
-                var t = parts.Where(p => p.StartsWith(_PID)).Select(p => p.Split(':')[1]).First();
-                temp.Add(t);
-            }
         }
 
         $"{numberOfValidPassports} valid passports".Dump();
-        foreach (var item in temp)
-        {
-            item.Dump();
-        }
-
     }
 
     private bool PassportHasValidData(string[] parts, string passport)
