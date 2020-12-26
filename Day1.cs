@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-public class ExpenseFixer 
+public class ReportRepair 
 {
     public void Run()
     {

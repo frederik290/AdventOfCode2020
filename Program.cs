@@ -14,11 +14,11 @@ namespace AdventOfCode
 
         void Run()
         {
-            // new ExpenseFixer().Run();
+            // new ReportRepair().Run();
             // new PasswordPhilosophy().Run();
             // new TobogganTrajectory().Run();
             //new PassportProcessing().Run();
-            new BinaryBoarding().Run();
+            //new BinaryBoarding().Run();
         }
 
     }
