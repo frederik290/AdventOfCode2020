@@ -16,4 +16,10 @@ public static class Util
     {
         System.Console.WriteLine(str);
     }
+
+    public static void Dump<T>(this IEnumerable<T> collection)
+    {
+        foreach (var item in collection)
+            item.ToString().Dump();   
+    }
 }
